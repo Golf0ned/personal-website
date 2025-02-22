@@ -4,6 +4,7 @@ import { AppShell, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 import "./App.css";
 
@@ -20,54 +21,7 @@ function App() {
                 </AppShell.Header>
 
                 <AppShell.Main>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
-                    <div>Body</div>
+                    <Home />
                 </AppShell.Main>
 
             </AppShell>
