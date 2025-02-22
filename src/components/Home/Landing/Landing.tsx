@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import {
     Button,
+    Container,
     Group,
     Transition,
 } from "@mantine/core";
@@ -47,9 +48,9 @@ export default function Landing() {
     ));
 
     return (
-        <>
+        <Container p={0} mt="25vh"
+        >
             <AnimatedTitle
-                mt={128}
                 loaded={loaded}
                 onComplete={() => {
                     setLoaded(true);
@@ -62,11 +63,11 @@ export default function Landing() {
                 timingFunction="ease"
             >
                 {(styles) => (
-                    <Group justify="center" mt="lg" style={styles}>
+                    <Group justify="center" mt="xl" style={styles}>
                         {buttonGroups}
                     </Group>
                 )}
             </Transition>
-        </>
+        </Container>
     )
 }
