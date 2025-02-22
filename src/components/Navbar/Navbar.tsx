@@ -7,7 +7,7 @@ import {
     Container,
     Group,
     Image,
-    Paper
+    Paper,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
