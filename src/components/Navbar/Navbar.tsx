@@ -3,9 +3,11 @@ import { useState } from "react";
 import {
     Burger,
     Button,
+    Collapse,
     Container,
     Group,
     Image,
+    Paper
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -37,14 +39,31 @@ export default function Navbar() {
         </Button>
     ));
 
+    const items_burger = links.map((link) => (
+        <Button
+            key={link.label}
+            variant="default"
+            color="--mantine-color-default-color"
+            fullWidth
+            href={link.href}
+            onClick={(event) => {
+                toggle();
+                event.preventDefault();
+            }}
+        >
+            {link.label}
+        </Button>
+    ));
+
     return (
         <Container>
-            <Group mt={4}>
+            <Group mt={4} justify="flex-end">
                 <Button
                     variant="transparent"
                     color="--mantine-color-default-color"
                     size="compact-xl"
                     leftSection={<Image src="../assets/honktie.png" h={32} />}
+                    mr="auto"
                     onClick={(event) => {
                         event.preventDefault();
                     }}
@@ -52,23 +71,25 @@ export default function Navbar() {
                     Benjamin Ye
                 </Button>
 
-                <Group visibleFrom="sm" ml="auto">
+                <Group visibleFrom="sm">
                     {items}
                 </Group>
 
                 <Group visibleFrom="sm">
-                    <ColorSchemeSwitcher />
+                    {/*TODO: socials*/}
                 </Group>
-
+                
+                <ColorSchemeSwitcher />
                 <Burger
-                    ml="auto"
+                    hiddenFrom="sm"
                     opened={opened}
                     onClick={toggle}
                     size="sm"
-                    hiddenFrom="sm"
-                    aria-label="Toggle navigation"
                 />
             </Group>
+            <Collapse hiddenFrom="sm" in={opened}>
+                <Paper mt={-0.5} p="md">{items_burger}</Paper>
+            </Collapse>
         </Container>
     );
 }
