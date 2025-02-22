@@ -11,7 +11,7 @@ function App() {
     return (
         <MantineProvider>
             <AppShell
-                header={{ height: 60 }}
+                header={{ height: 50 }}
                 padding="md"
             >
         
@@ -20,6 +20,53 @@ function App() {
                 </AppShell.Header>
 
                 <AppShell.Main>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
+                    <div>Body</div>
                     <div>Body</div>
                 </AppShell.Main>
 
