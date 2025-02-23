@@ -29,8 +29,8 @@ const buttons = [
 ];
 
 
-export default function Landing() {
-    const [loaded, setLoaded] = useState(false);
+export default function Landing({ onComplete }) {
+    const [loadedTitle, setLoadedTitle] = useState(false);
 
     const buttonGroups = buttons.map((group, index) => (
         <Group key={index}>
@@ -47,18 +47,22 @@ export default function Landing() {
         </Group>
     ));
 
+    const handleTitleLoad = () => {
+        setLoadedTitle(true);
+        setTimeout(() => {
+            onComplete();
+        }, 500);
+    }
+
     return (
-        <Container p={0} mt="25vh"
-        >
+        <Container p={0} mt="30vh" mb="30vh">
             <AnimatedTitle
-                loaded={loaded}
-                onComplete={() => {
-                    setLoaded(true);
-                }}
+                loaded={loadedTitle}
+                onComplete={() => {handleTitleLoad()}}
             />
             <Transition
-                mounted={loaded}
-                transition="pop"
+                mounted={loadedTitle}
+                transition="fade-up"
                 duration={200}
                 timingFunction="ease"
             >

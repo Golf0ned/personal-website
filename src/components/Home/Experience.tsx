@@ -80,7 +80,7 @@ export default function Experience() {
     ));
 
     return (
-        <Container p={0} mt="25vh">
+        <Container p={0}>
             <Stack spacing="md">
                 <Title order={1}>Experience</Title>
                 <Timeline
