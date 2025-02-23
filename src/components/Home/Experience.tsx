@@ -42,6 +42,25 @@ const work = [
         start: "Mar. 2024",
         end: "Present",
     },
+    {
+        company: "Northwestern University",
+        title: "Peer Mentor",
+        start: "Jan. 2024",
+        end: "Present",
+    },
+    {
+        company: "Northwestern High School Institute",
+        title: "Lab Leader",
+        start: "Jul. 2022",
+        end: "Aug. 2023",
+    },
+    {
+        company: "Northwestern High School Institute",
+        title: "Resident Assistant",
+        start: "Jul. 2022",
+        end: "Aug. 2023",
+    },
+
 ]
 
 
@@ -52,7 +71,7 @@ export default function Experience() {
             title={entry.school}
             bullet={<IconPointFilled />}
         >
-            <Text c="dimmed">{entry.degree}</Text>
+            <Text>{entry.degree}</Text>
             <Text c="dimmed">{entry.range}</Text>
         </Timeline.Item>
     ));
@@ -63,7 +82,7 @@ export default function Experience() {
             title={entry.organization}
             bullet={<IconPointFilled />}
         >
-            <Text c="dimmed">{entry.position}</Text>
+            <Text>{entry.position}</Text>
             <Text c="dimmed">{entry.start} - {entry.end}</Text>
         </Timeline.Item>
     ));
@@ -74,7 +93,7 @@ export default function Experience() {
             title={entry.company}
             bullet={<IconPointFilled />}
         >
-            <Text c="dimmed">{entry.title}</Text>
+            <Text>{entry.title}</Text>
             <Text c="dimmed">{entry.start} - {entry.end}</Text>
         </Timeline.Item>
     ));
