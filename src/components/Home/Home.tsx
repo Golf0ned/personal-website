@@ -5,6 +5,7 @@ import {
     Container,
     Transition,
 } from "@mantine/core";
+import { Parallax } from "react-scroll-parallax";
 
 import Experience from "./Experience";
 import Landing from "./Landing";
@@ -15,9 +16,11 @@ export default function Home() {
 
     return (
         <Container>
-            <Landing
-                onComplete={() => setLoadedLanding(true)}
-            />
+            <Parallax speed={-100}>
+                <Landing
+                    onComplete={() => setLoadedLanding(true)}
+                />
+            </Parallax>
             <Transition
                 mounted={loadedLanding}
                 transition="fade-up"

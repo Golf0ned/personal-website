@@ -14,7 +14,8 @@
     "@mantine/hooks": "^7.17.0",
     "@tabler/icons-react": "^3.30.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
