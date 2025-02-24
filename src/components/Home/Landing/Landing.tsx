@@ -55,23 +55,25 @@ export default function Landing({ onComplete }) {
     }
 
     return (
-        <Container p={0} mt="30vh" mb="30vh">
-            <AnimatedTitle
-                loaded={loadedTitle}
-                onComplete={() => {handleTitleLoad()}}
-            />
-            <Transition
-                mounted={loadedTitle}
-                transition="fade-up"
-                duration={200}
-                timingFunction="ease"
-            >
-                {(styles) => (
-                    <Group justify="center" mt="xl" style={styles}>
-                        {buttonGroups}
-                    </Group>
-                )}
-            </Transition>
+        <Container fluid={true} h="95vh" display="flex" style={{ alignItems: "center" }}>
+            <Container fluid={true}>
+                <AnimatedTitle
+                    loaded={loadedTitle}
+                    onComplete={() => {handleTitleLoad()}}
+                />
+                <Transition
+                    mounted={loadedTitle}
+                    transition="fade-up"
+                    duration={200}
+                    timingFunction="ease"
+                >
+                    {(styles) => (
+                        <Group justify="center" mt="xl" style={styles}>
+                            {buttonGroups}
+                        </Group>
+                    )}
+                </Transition>
+            </Container>
         </Container>
     )
 }

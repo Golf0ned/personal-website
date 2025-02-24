@@ -99,7 +99,7 @@ export default function Experience() {
     ));
 
     return (
-        <Container p={0}>
+        <Container fluid={true}>
             <Stack spacing="md">
                 <Title order={1}>Experience</Title>
                 <Timeline
