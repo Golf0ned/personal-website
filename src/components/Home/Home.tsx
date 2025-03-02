@@ -2,8 +2,11 @@ import { useState } from "react";
 
 import {
     Button,
+    Card,
     Container,
+    Stack,
     Transition,
+    Text,
 } from "@mantine/core";
 import { Parallax } from "react-scroll-parallax";
 
@@ -16,7 +19,7 @@ export default function Home() {
 
     return (
         <Container>
-            <Parallax speed={-100}>
+            <Parallax speed={-50}>
                 <Landing
                     onComplete={() => setLoadedLanding(true)}
                 />
@@ -28,9 +31,11 @@ export default function Home() {
                 timingFunction="ease"
             >
                 {(styles) => (    
-                    <Container p={0} style={styles}>
+                    <Stack style={styles}>
+                        <Card radius="md">
+                        </Card>
                         <Experience />
-                    </Container>
+                    </Stack>
                 )}
             </Transition>
         </Container>
