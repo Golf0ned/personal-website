@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Text, Title, Transition } from "@mantine/core";
+import { Title } from "@mantine/core";
 
 import classes from "./AnimatedTitle.module.css";
 

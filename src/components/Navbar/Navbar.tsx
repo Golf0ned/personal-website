@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import {
     Burger,
     Button,
@@ -12,8 +10,6 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 
 import ColorSchemeSwitcher from "./ColorSchemeSwitcher";
-
-import classes from "./Navbar.module.css";
 
 
 const links = [
@@ -30,7 +26,6 @@ export default function Navbar() {
             key={link.label}
             variant="subtle"
             color="--mantine-color-default-color"
-            href={link.href}
             onClick={(event) => {
                 event.preventDefault();
             }}
@@ -45,7 +40,6 @@ export default function Navbar() {
             variant="default"
             color="--mantine-color-default-color"
             fullWidth
-            href={link.href}
             onClick={(event) => {
                 toggle();
                 event.preventDefault();

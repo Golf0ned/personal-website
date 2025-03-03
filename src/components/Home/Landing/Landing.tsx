@@ -36,7 +36,7 @@ export default function Landing({ onComplete }) {
         <Group key={index}>
             {group.map(({ text, icon }, index) => (
                 <Button
-                    key={text}
+                    key={`${text}-${index}`}
                     variant="default"
                     size="md"
                     leftSection={icon}

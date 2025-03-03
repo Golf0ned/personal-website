@@ -100,7 +100,7 @@ export default function Experience() {
 
     return (
         <Container fluid={true}>
-            <Stack spacing="md">
+            <Stack gap="md">
                 <Title order={1}>Experience</Title>
                 <Timeline
                     active={Object.keys(education).length}

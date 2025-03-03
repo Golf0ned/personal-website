@@ -1,12 +1,10 @@
 import { useState } from "react";
 
 import {
-    Button,
     Card,
     Container,
     Stack,
     Transition,
-    Text,
 } from "@mantine/core";
 import { Parallax } from "react-scroll-parallax";
 

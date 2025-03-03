@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { AppShell, MantineProvider } from "@mantine/core";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "@mantine/core/styles.css";
