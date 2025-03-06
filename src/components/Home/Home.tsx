@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         <Container>
-            <Parallax speed={-50}>
+            <Parallax speed={-30}>
                 <Landing
                     onComplete={() => setLoadedLanding(true)}
                 />
