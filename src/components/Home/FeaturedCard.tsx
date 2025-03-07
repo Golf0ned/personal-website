@@ -11,6 +11,9 @@ import {
     Text,
     Title,
 } from "@mantine/core";
+import {
+    IconBrandGithub,
+} from "@tabler/icons-react";
 
 
 interface props {
@@ -22,11 +25,11 @@ interface props {
 
 export default function FeaturedCard({ image, name, description, github }: props) {
     return (
-        <Card withBorder h={300}>
+        <Card withBorder h={250}>
             <Card.Section>
                 <Group grow>
                     <BackgroundImage src={image}>
-                        <Box h={300}/>
+                        <Box h={250}/>
                     </BackgroundImage>
                     <Card ml="-7">
                         <Card.Section withBorder>
@@ -35,10 +38,19 @@ export default function FeaturedCard({ image, name, description, github }: props
                                 <Badge>Featured</Badge>
                             </Group>
                         </Card.Section>
-                        <Text mt="sm" mb="150">{description}</Text>
+                        <Text mt="sm" mb="100">{description}</Text>
                         <Card.Section>
                             <Group justify="flex-end" m="xs">
-                            <Button variant="default">Github</Button>
+                                <Button
+                                    variant="default"
+                                    leftSection={<IconBrandGithub />}
+                                    component="a"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={github}
+                                >
+                                    Github
+                                </Button>
                             </Group>
                         </Card.Section>
                     </Card>
