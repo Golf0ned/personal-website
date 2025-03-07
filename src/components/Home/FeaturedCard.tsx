@@ -1,8 +1,10 @@
 import {
-    AspectRatio,
+    BackgroundImage,
     Badge,
+    Box,
     Button,
     Card,
+    Center,
     Container,
     Group,
     Stack,
@@ -21,27 +23,27 @@ interface props {
 export default function FeaturedCard({ image, name, description, github }: props) {
     return (
         <Card withBorder h={300}>
-                <Group>
-                    <AspectRatio ratio={16 / 9} h="auto" style={{ flex: 1 }}>
-                        <img src={image}/>
-                    </AspectRatio>
-                    <Container m="0" p="0" style={{ flex: 1 }}>
-                        <Stack gap="md" justify="space-between">
-                            <Group m="0" justify="space-between">
+            <Card.Section>
+                <Group grow>
+                    <BackgroundImage src={image}>
+                        <Box h={300}/>
+                    </BackgroundImage>
+                    <Card ml="-7">
+                        <Card.Section withBorder>
+                            <Group justify="space-between" m="xs">
                                 <Title order={3}>{name}</Title>
-                                <Badge color="blue">New</Badge>
+                                <Badge>Featured</Badge>
                             </Group>
-                            <Text>{description}</Text>
-                            <Button
-                                component="a"
-                                href={github}
-                                mt="auto"
-                            >
-                                View on GitHub
-                            </Button>
-                        </Stack>
-                    </Container>
+                        </Card.Section>
+                        <Text mt="sm" mb="150">{description}</Text>
+                        <Card.Section>
+                            <Group justify="flex-end" m="xs">
+                            <Button variant="default">Github</Button>
+                            </Group>
+                        </Card.Section>
+                    </Card>
                 </Group>
+            </Card.Section>
         </Card>
     );
 }
