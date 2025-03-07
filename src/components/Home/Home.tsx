@@ -39,7 +39,7 @@ export default function Home() {
                         <FeaturedCard
                             image="../assets/honktie.png"
                             name="reacto"
-                            description="A React component library."
+                            description="A Discord bot that turns text into message reactions."
                             github="https://github.com/Golf0ned/reacto"
                         />
                         <Experience />
