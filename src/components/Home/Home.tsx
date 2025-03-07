@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import {
-    Card,
     Container,
     Stack,
     Transition,
@@ -9,6 +8,7 @@ import {
 import { Parallax } from "react-scroll-parallax";
 
 import Experience from "./Experience";
+import FeaturedCard from "./FeaturedCard";
 import Landing from "./Landing";
 
 
@@ -30,8 +30,18 @@ export default function Home() {
             >
                 {(styles) => (    
                     <Stack style={styles}>
-                        <Card radius="md">
-                        </Card>
+                        <FeaturedCard
+                            image="../assets/nu-miku.jpg"
+                            name="NU Esports Bot"
+                            description="A Discord bot for the NU Esports Discord server."
+                            github="https://github.com/Golf0ned/nu-esports-bot"
+                        />
+                        <FeaturedCard
+                            image="../assets/honktie.png"
+                            name="reacto"
+                            description="A React component library."
+                            github="https://github.com/Golf0ned/reacto"
+                        />
                         <Experience />
                     </Stack>
                 )}
