@@ -99,42 +99,43 @@ export default function Experience() {
     ));
 
     return (
-        <Container fluid={true}>
-            <Stack gap="md">
-                <Title order={1}>Experience</Title>
-                <Timeline
-                    active={Object.keys(education).length}
-                    lineWidth={5}
-                    bulletSize={30}
-                >
-                    <Timeline.Item key="title" bullet={<IconSchool />}>
-                        <Title order={3} mb={-16} c="blue.6">Education</Title>
-                    </Timeline.Item>
-                    {educationEntries}
-                </Timeline>
-                <Timeline
-                    active={Object.keys(organizations).length}
-                    color="green"
-                    lineWidth={5}
-                    bulletSize={30}
-                >
-                    <Timeline.Item key="title" bullet={<IconSchool />}>
-                        <Title order={3} mb={-16} c="green.6">Organizations</Title>
-                    </Timeline.Item>
-                    {organizationEntries}
-                </Timeline>
-                <Timeline
-                    active={Object.keys(work).length}
-                    color="violet"
-                    lineWidth={5}
-                    bulletSize={30}
-                >
-                    <Timeline.Item key="title" bullet={<IconSchool />}>
-                        <Title order={3} mb={-16} c="violet.6">Work</Title>
-                    </Timeline.Item>
-                    {workEntries}
-                </Timeline>
-            </Stack>
-        </Container>
+        <Stack gap="md">
+            <Title order={1}>Experience</Title>
+            <Timeline
+                active={Object.keys(education).length}
+                lineWidth={5}
+                bulletSize={30}
+                ml="md"
+            >
+                <Timeline.Item key="title" bullet={<IconSchool />}>
+                    <Title order={3} mb={-16} c="blue.6">Education</Title>
+                </Timeline.Item>
+                {educationEntries}
+            </Timeline>
+            <Timeline
+                active={Object.keys(organizations).length}
+                color="green"
+                lineWidth={5}
+                bulletSize={30}
+                ml="md"
+            >
+                <Timeline.Item key="title" bullet={<IconSchool />}>
+                    <Title order={3} mb={-16} c="green.6">Organizations</Title>
+                </Timeline.Item>
+                {organizationEntries}
+            </Timeline>
+            <Timeline
+                active={Object.keys(work).length}
+                color="violet"
+                lineWidth={5}
+                bulletSize={30}
+                ml="md"
+            >
+                <Timeline.Item key="title" bullet={<IconSchool />}>
+                    <Title order={3} mb={-16} c="violet.6">Work</Title>
+                </Timeline.Item>
+                {workEntries}
+            </Timeline>
+        </Stack>
     );
 }
