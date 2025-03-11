@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import {
     Button,
     Group,
@@ -65,8 +67,8 @@ function ButtonSameTab({ text, icon, href }) {
             variant="default"
             size="md"
             leftSection={icon}
-            component="a"
-            href={href}
+            component={Link}
+            to={href}
         >
             {text}
         </Button>

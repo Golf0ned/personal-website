@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import {
     Burger,
     Button,
@@ -30,8 +32,8 @@ export default function Navbar() {
             size="md"
             mb={-4}
             color="--mantine-color-default-color"
-            component="a"
-            href={link.href}
+            component={Link}
+            to={link.href}
         >
             {link.label}
         </Button>
