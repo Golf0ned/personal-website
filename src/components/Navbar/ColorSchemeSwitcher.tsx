@@ -1,8 +1,13 @@
 import { useState } from "react";
 
-import { ActionIcon, useComputedColorScheme, useMantineColorScheme } from "@mantine/core";
+import { 
+    ActionIcon,
+    Tooltip,
+    useComputedColorScheme,
+    useMantineColorScheme,
+} from "@mantine/core";
 
-import {IconSun, IconMoon} from "@tabler/icons-react";
+import { IconSun, IconMoon } from "@tabler/icons-react";
 
 
 export default function ColorSchemeSwitcher() {
@@ -16,12 +21,14 @@ export default function ColorSchemeSwitcher() {
     }
 
     return (
-        <ActionIcon
-            variant="default"
-            size="md"
-            onClick={() => toggleColorScheme()}
-        >
-            {icon}
-        </ActionIcon>
+        <Tooltip label="Toggle Theme">
+            <ActionIcon
+                variant="default"
+                size="lg"
+                onClick={() => toggleColorScheme()}
+            >
+                {icon}
+            </ActionIcon>
+        </Tooltip>
     );
 }

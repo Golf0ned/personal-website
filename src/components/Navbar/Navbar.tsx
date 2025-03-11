@@ -10,9 +10,11 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 
 import ColorSchemeSwitcher from "./ColorSchemeSwitcher";
+import Resume from "./Resume";
 
 
 const links = [
+    { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     { label: "Contact", href: "/contact" },
 ];
@@ -25,6 +27,8 @@ export default function Navbar() {
         <Button
             key={link.label}
             variant="subtle"
+            size="md"
+            mb={-4}
             color="--mantine-color-default-color"
             onClick={(event) => {
                 event.preventDefault();
@@ -57,7 +61,6 @@ export default function Navbar() {
                     color="--mantine-color-default-color"
                     size="compact-xl"
                     leftSection={<Image src="../assets/honktie.png" h={32} />}
-                    mr="auto"
                     onClick={(event) => {
                         event.preventDefault();
                     }}
@@ -65,15 +68,15 @@ export default function Navbar() {
                     Benjamin Ye
                 </Button>
 
-                <Group visibleFrom="sm">
+                <Group visibleFrom="sm" gap="xs">
                     {items}
                 </Group>
 
-                <Group visibleFrom="sm">
-                    {/*TODO: socials*/}
+                <Group ml="auto">
+                    <Resume />
+                    <ColorSchemeSwitcher />
                 </Group>
                 
-                <ColorSchemeSwitcher />
                 <Burger
                     hiddenFrom="sm"
                     opened={opened}
