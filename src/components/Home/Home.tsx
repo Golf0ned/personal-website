@@ -16,9 +16,8 @@ export default function Home() {
         <Container>
             <Container
                 fluid
-                pt="30vh"
-                pb="25vh"
                 display="flex"
+                h="95vh"
                 style={{ alignItems: "center" }}
             >
                 <Container fluid>
