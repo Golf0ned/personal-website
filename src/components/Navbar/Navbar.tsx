@@ -30,9 +30,8 @@ export default function Navbar() {
             size="md"
             mb={-4}
             color="--mantine-color-default-color"
-            onClick={(event) => {
-                event.preventDefault();
-            }}
+            component="a"
+            href={link.href}
         >
             {link.label}
         </Button>
@@ -61,9 +60,8 @@ export default function Navbar() {
                     color="--mantine-color-default-color"
                     size="compact-xl"
                     leftSection={<Image src="../assets/honktie.png" h={32} />}
-                    onClick={(event) => {
-                        event.preventDefault();
-                    }}
+                    component="a"
+                    href="/"
                 >
                     Benjamin Ye
                 </Button>

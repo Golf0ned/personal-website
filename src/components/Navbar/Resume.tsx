@@ -12,6 +12,10 @@ export default function Resume() {
             <ActionIcon
                 variant="default"
                 size="lg"
+                component="a"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="../assets/Resume_Benjamin_Ye.pdf"
             >
                 <IconFileText />
             </ActionIcon>
