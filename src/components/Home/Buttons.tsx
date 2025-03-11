@@ -16,7 +16,7 @@ const buttons = [
         { 
             text: "Learn about me",
             icon: <IconMoodSmileBeam />,
-            href: "#about",
+            href: "/about",
             newTab: false,
         },
         {
@@ -65,6 +65,7 @@ function ButtonSameTab({ text, icon, href }) {
             variant="default"
             size="md"
             leftSection={icon}
+            component="a"
             href={href}
         >
             {text}
