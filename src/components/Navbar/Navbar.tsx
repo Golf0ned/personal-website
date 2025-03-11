@@ -62,8 +62,8 @@ export default function Navbar() {
                     color="--mantine-color-default-color"
                     size="compact-xl"
                     leftSection={<Image src="../assets/honktie.png" h={32} />}
-                    component="a"
-                    href="/"
+                    component={Link}
+                    to="/"
                 >
                     Benjamin Ye
                 </Button>
