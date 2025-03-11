@@ -20,21 +20,6 @@ const education = [
     },
 ];
 
-const organizations = [
-    {
-        organization: "Northwestern Esports",
-        position: "Bot Developer",
-        start: "Jan. 2023",
-        end: "Present",
-    },
-    {
-        organization: "Northwestern Debate Society",
-        position: "Debater",
-        start: "Sept. 2022",
-        end: "Present",
-    },
-]
-
 const work = [
     {
         company: "Northwestern University",
@@ -76,17 +61,6 @@ export default function Experience() {
         </Timeline.Item>
     ));
 
-    const organizationEntries = organizations.map((entry) => (
-        <Timeline.Item
-            key={`organization-${entry.organization}-${entry.position}`}
-            title={entry.organization}
-            bullet={<IconPointFilled />}
-        >
-            <Text>{entry.position}</Text>
-            <Text c="dimmed">{entry.start} - {entry.end}</Text>
-        </Timeline.Item>
-    ));
-
     const workEntries = work.map((entry) => (
         <Timeline.Item
             key={`work-${entry.company}-${entry.title}`}
@@ -111,18 +85,6 @@ export default function Experience() {
                     <Title order={3} mb={-16} c="blue.6">Education</Title>
                 </Timeline.Item>
                 {educationEntries}
-            </Timeline>
-            <Timeline
-                active={Object.keys(organizations).length}
-                color="green"
-                lineWidth={5}
-                bulletSize={30}
-                ml="md"
-            >
-                <Timeline.Item key="title" bullet={<IconSchool />}>
-                    <Title order={3} mb={-16} c="green.6">Organizations</Title>
-                </Timeline.Item>
-                {organizationEntries}
             </Timeline>
             <Timeline
                 active={Object.keys(work).length}
