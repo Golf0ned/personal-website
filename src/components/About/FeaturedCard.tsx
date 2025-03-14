@@ -35,21 +35,7 @@ export default function FeaturedCard({ image, name, description, github }: props
                                 <Badge>Featured</Badge>
                             </Group>
                         </Card.Section>
-                        <Text mt="sm" mb="100">{description}</Text>
-                        <Card.Section>
-                            <Group justify="flex-end" m="xs">
-                                <Button
-                                    variant="default"
-                                    leftSection={<IconBrandGithub />}
-                                    component="a"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={github}
-                                >
-                                    Github
-                                </Button>
-                            </Group>
-                        </Card.Section>
+                        <Text mt="sm" mb="120">{description}</Text>
                     </Card>
                 </Group>
             </Card.Section>
