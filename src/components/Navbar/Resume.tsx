@@ -15,7 +15,7 @@ export default function Resume() {
                 component="a"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="/assets/Resume_Benjamin_Ye.pdf"
+                href="assets/Resume_Benjamin_Ye.pdf"
             >
                 <IconFileText />
             </ActionIcon>

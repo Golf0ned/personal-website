@@ -33,7 +33,7 @@ const buttons = [
         {
             text: "Peek at my resume",
             icon: <IconFileInvoice />,
-            href: "/assets/Resume_Benjamin_Ye.pdf",
+            href: "assets/Resume_Benjamin_Ye.pdf",
             newTab: true,
         },
         {
