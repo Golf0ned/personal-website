@@ -3,6 +3,7 @@ import {
     Stack,
 } from "@mantine/core";
 
+import Bio from "./Bio";
 import Experience from "./Experience";
 import FeaturedCard from "./FeaturedCard";
 
@@ -11,6 +12,7 @@ export default function Home() {
     return (
         <Container>
                 <Stack>
+                    <Bio />
                     <FeaturedCard
                         image="../assets/nu-miku.jpg"
                         name="NU Esports Bot"
