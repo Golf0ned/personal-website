@@ -2,15 +2,11 @@ import {
     BackgroundImage,
     Badge,
     Box,
-    Button,
     Card,
     Group,
     Text,
     Title,
 } from "@mantine/core";
-import {
-    IconBrandGithub,
-} from "@tabler/icons-react";
 
 
 interface props {
@@ -20,7 +16,7 @@ interface props {
     github: string;
 }
 
-export default function FeaturedCard({ image, name, description, github }: props) {
+export default function FeaturedCard({ image, name, description }: props) {
     return (
         <Card withBorder h={250}>
             <Card.Section>

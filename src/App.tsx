@@ -31,7 +31,6 @@ function App() {
                     <Routes>
 
                         <Route
-                            title="Home | Benjamin Ye"
                             path="/"
                             element={
                                 <Page title="Home | Benjamin Ye">

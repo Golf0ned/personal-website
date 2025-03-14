@@ -45,8 +45,13 @@ const buttons = [
     ],
 ];
 
+interface ButtonProps {
+    text: string;
+    icon: React.ReactNode;
+    href: string;
+}
 
-function ButtonNewTab({ text, icon, href }) {
+function ButtonNewTab({ text, icon, href }: ButtonProps) {
     return (
         <Button
             variant="default"
@@ -62,7 +67,7 @@ function ButtonNewTab({ text, icon, href }) {
     );
 }
 
-function ButtonSameTab({ text, icon, href }) {
+function ButtonSameTab({ text, icon, href }: ButtonProps) {
     return (
         <Button
             variant="default"

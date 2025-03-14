@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 
 
-export default function Page({ title, ...props }) {
+interface Props {
+    title: string;
+    children: React.ReactNode;
+}
+
+export default function Page({ title, ...props }: Props) {
     useEffect(() => {
         document.title = title;
     }, [title]);

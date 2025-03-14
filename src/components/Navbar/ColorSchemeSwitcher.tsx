@@ -11,6 +11,7 @@ import { IconSun, IconMoon } from "@tabler/icons-react";
 
 
 export default function ColorSchemeSwitcher() {
+    // @ts-expect-error: colorScheme used globally
     const { colorScheme, setColorScheme } = useMantineColorScheme();
     const computedColorScheme = useComputedColorScheme("dark");
     const [icon, setIcon] = useState(computedColorScheme === "dark" ? <IconSun /> : <IconMoon />);
