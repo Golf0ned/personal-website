@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import {
     Button,
     Group,
+    Stack,
 } from "@mantine/core";
 
 import {
@@ -77,7 +78,7 @@ function ButtonSameTab({ text, icon, href }) {
 
 export default function Buttons() {
     const buttonGroups = buttons.map((group, index) => (
-        <Group key={index}>
+        <Group key={index} visibleFrom="sm">
             {group.map(({ text, icon, href, newTab }, index) => {
                 if (newTab) {
                     return (
@@ -103,9 +104,39 @@ export default function Buttons() {
         </Group>
     ));
 
+    const buttonGroupsNarrow = buttons.map((group) => (
+        group.map(({ text, icon, href, newTab }, index) => {
+            if (newTab) {
+                return (
+                    <ButtonNewTab
+                        key={`${text}-${index}-narrow`}
+                        text={text}
+                        icon={icon}
+                        href={href}
+                    />
+                );
+            }
+            else {
+                return (
+                    <ButtonSameTab
+                        key={`${text}-${index}-narrow`}
+                        text={text}
+                        icon={icon}
+                        href={href}
+                    />
+                );
+            }
+        })
+    ));
+
     return (
+        <>
         <Group justify="center" mt="xl">
             {buttonGroups}
+            <Stack gap="xs" hiddenFrom="sm">
+                {buttonGroupsNarrow}
+            </Stack>
         </Group>
+        </>
     );
 }
