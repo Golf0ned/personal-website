@@ -30,11 +30,12 @@ export default function Navbar() {
         <Button
             key={link.label}
             variant="subtle"
-            size="md"
+            size="sm"
             mb={-4}
             color="--mantine-color-default-color"
             component={Link}
             to={link.href}
+            style={{ fontSize: 16 }}
         >
             {link.label}
         </Button>
@@ -61,7 +62,7 @@ export default function Navbar() {
                 <Button
                     variant="transparent"
                     color="--mantine-color-default-color"
-                    size="compact-xl"
+                    size="compact-lg"
                     leftSection={<Image src="../assets/honktie.png" h={32} />}
                     component={Link}
                     to="/"
@@ -73,7 +74,7 @@ export default function Navbar() {
                     {items}
                 </Group>
 
-                <Group ml="auto">
+                <Group ml="auto" pt={4}>
                     <Blog />
                     <Resume />
                     <ColorSchemeSwitcher />
