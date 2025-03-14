@@ -2,9 +2,12 @@
 
 Rewrite of my personal website, featuring more than just raw HTML/CSS!
 
-Written with [React](https://react.dev).
+Written with [React](https://react.dev) and [Vite](https://vite.dev).
 
-Styling provided by [Mantine](https://mantine.dev).
+Packages used:
+- [React Router](https://reactrouter.com) - routing
+- [Mantine](https://mantine.dev) - primary component styling
+- [Tabler Icons](https://tabler.io/icons) - icons
 
-Icons provided by [Tabler Icons](https://tabler.io/icons).
+Additionally, multi-page support for GitHub Pages graciously pulled from [here](https://github.com/rafgraph/spa-github-pages).
 
