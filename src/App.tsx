@@ -5,6 +5,8 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import "@mantine/core/styles.css";
 
 import Layout from "./components/Layout";
+import Page from "./components/Page";
+
 import Home from "./components/Home";
 import About from "./components/About";
 
@@ -17,10 +19,25 @@ function App() {
                 <BrowserRouter>
                     <Routes>
 
-                        <Route path="/" element={<Home />} />
+                        <Route
+                            title="Home | Benjamin Ye"
+                            path="/"
+                            element={
+                                <Page title="Home | Benjamin Ye">
+                                    <Home />
+                                </Page>
+                            }
+                        />
 
                         <Route element={<Layout />}>
-                            <Route path="/about" element={<About />} />
+                            <Route
+                                path="/about"
+                                element={
+                                    <Page title="About | Benjamin Ye">
+                                        <About />
+                                    </Page>
+                                }
+                            />
                         </Route>
 
                     </Routes>
