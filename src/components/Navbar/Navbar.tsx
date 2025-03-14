@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
+import Blog from "./Blog";
 import ColorSchemeSwitcher from "./ColorSchemeSwitcher";
 import Resume from "./Resume";
 
@@ -73,6 +74,7 @@ export default function Navbar() {
                 </Group>
 
                 <Group ml="auto">
+                    <Blog />
                     <Resume />
                     <ColorSchemeSwitcher />
                 </Group>
