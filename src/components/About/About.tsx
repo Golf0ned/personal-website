@@ -5,7 +5,8 @@ import {
 
 import Bio from "./Bio";
 import Experience from "./Experience";
-import FeaturedCard from "./FeaturedCard";
+import Featured from "./Featured";
+import Skills from "./Skills";
 
 
 export default function Home() {
@@ -13,19 +14,9 @@ export default function Home() {
         <Container>
                 <Stack>
                     <Bio />
-                    <FeaturedCard
-                        image="../assets/nu-miku.jpg"
-                        name="NU Esports Bot"
-                        description="A Discord bot for the NU Esports Discord server."
-                        github="https://github.com/Golf0ned/nu-esports-bot"
-                    />
-                    <FeaturedCard
-                        image="../assets/honktie.png"
-                        name="reacto"
-                        description="A Discord bot that turns text into message reactions."
-                        github="https://github.com/Golf0ned/reacto"
-                    />
+                    <Skills />
                     <Experience />
+                    <Featured />
                 </Stack>
         </Container>
     );
