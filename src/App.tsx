@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 
-import { AppShell, MantineProvider } from "@mantine/core";
+import { createTheme, MantineProvider, rem } from "@mantine/core";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "@mantine/core/styles.css";
 
@@ -12,10 +12,21 @@ import About from "./components/About";
 
 import "./App.css";
 
+
+const theme = createTheme({
+    fontSizes: {
+        xs: rem(11),
+        sm: rem(14),
+        md: rem(18),
+        lg: rem(24),
+        xl: rem(28),
+    },
+});
+
 function App() {
     return (
         <ParallaxProvider>
-            <MantineProvider>
+            <MantineProvider theme={theme}>
                 <BrowserRouter>
                     <Routes>
 
