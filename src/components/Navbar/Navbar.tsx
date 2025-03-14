@@ -63,7 +63,7 @@ export default function Navbar() {
                     variant="transparent"
                     color="--mantine-color-default-color"
                     size="compact-lg"
-                    leftSection={<Image src="../assets/honktie.png" h={32} />}
+                    leftSection={<Image src="/assets/honktie.png" h={32} />}
                     component={Link}
                     to="/"
                 >
