@@ -8,12 +8,11 @@ import {
     Group,
     Image,
     Paper,
+    Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
-import Blog from "./Blog";
-import ColorSchemeSwitcher from "./ColorSchemeSwitcher";
-import Resume from "./Resume";
+import SmallButtons from "./SmallButtons";
 
 
 const links = [
@@ -74,13 +73,10 @@ export default function Navbar() {
                     {items}
                 </Group>
 
-                <Group ml="auto" pt={4}>
-                    <Blog />
-                    <Resume />
-                    <ColorSchemeSwitcher />
-                </Group>
+                <SmallButtons visibleFrom="sm"/>
                 
                 <Burger
+                    ml="auto"
                     hiddenFrom="sm"
                     opened={opened}
                     onClick={toggle}
@@ -88,7 +84,12 @@ export default function Navbar() {
                 />
             </Group>
             <Collapse hiddenFrom="sm" in={opened}>
-                <Paper mt={-0.5} p="md">{items_burger}</Paper>
+                <Paper mt={-0.5} p="md">
+                    <Stack>
+                        <SmallButtons />
+                        {items_burger}
+                    </Stack>
+                </Paper>
             </Collapse>
         </Container>
     );
