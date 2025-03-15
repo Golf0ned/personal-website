@@ -12,6 +12,7 @@ export default function HomeButton() {
             variant="transparent"
             color="--mantine-color-default-color"
             size="compact-lg"
+            maw={200}
             leftSection={<Image src="/honktie.png" h={32} />}
             component={Link}
             to="/"
