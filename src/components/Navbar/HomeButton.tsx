@@ -1,0 +1,22 @@
+import { Link } from "react-router";
+
+import {
+    Button,
+    Image,
+} from "@mantine/core";
+
+
+export default function HomeButton() {
+    return (
+        <Button
+            variant="transparent"
+            color="--mantine-color-default-color"
+            size="compact-lg"
+            leftSection={<Image src="/honktie.png" h={32} />}
+            component={Link}
+            to="/"
+        >
+            Benjamin Ye
+        </Button>
+    );
+}

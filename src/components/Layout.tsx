@@ -8,7 +8,6 @@ import Navbar from "./Navbar";
 export default function Layout() {
     return (
         <AppShell
-            header={{ height: 50 }}
             padding="md"
         >
             <AppShell.Header>

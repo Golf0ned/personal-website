@@ -5,13 +5,14 @@ import {
     Button,
     Collapse,
     Container,
+    Divider,
     Group,
-    Image,
     Paper,
     Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
+import HomeButton from "./HomeButton";
 import SmallButtons from "./SmallButtons";
 
 
@@ -56,42 +57,34 @@ export default function Navbar() {
     ));
 
     return (
-        <Container>
-            <Group mt={4} justify="flex-end">
-                <Button
-                    variant="transparent"
-                    color="--mantine-color-default-color"
-                    size="compact-lg"
-                    leftSection={<Image src="/honktie.png" h={32} />}
-                    component={Link}
-                    to="/"
-                >
-                    Benjamin Ye
-                </Button>
+        <Paper mih="50" mt="xs">
+            <Container>
+                <Group mt={4} justify="flex-end">
+                    <HomeButton />
 
-                <Group visibleFrom="sm" gap="xs">
-                    {items}
+                    <Group visibleFrom="sm" gap="xs">
+                        {items}
+                    </Group>
+
+                    <SmallButtons visibleFrom="sm"/>
+                    
+                    <Burger
+                        ml="auto"
+                        hiddenFrom="sm"
+                        opened={opened}
+                        onClick={toggle}
+                        size="sm"
+                    />
                 </Group>
-
-                <SmallButtons visibleFrom="sm"/>
-                
-                <Burger
-                    ml="auto"
-                    hiddenFrom="sm"
-                    opened={opened}
-                    onClick={toggle}
-                    size="sm"
-                />
-            </Group>
-            <Collapse hiddenFrom="sm" in={opened}>
-                <Paper mt={-0.5} p="md">
-                    <Stack>
+                <Collapse hiddenFrom="sm" in={opened}>
+                    <Stack pt="xs">
                         <SmallButtons />
                         {items_burger}
                     </Stack>
-                </Paper>
-            </Collapse>
-        </Container>
+                </Collapse>
+            </Container>
+        <Divider mt="xs" />
+        </Paper>
     );
 }
 
