@@ -3,18 +3,19 @@ import {
     Tooltip,
 } from "@mantine/core";
 
-import { IconNotebook } from "@tabler/icons-react";
+import { IconMail } from "@tabler/icons-react";
 
 
-export default function Blog() {
+export default function Email() {
     return (
-        <Tooltip label="Blog">
+        <Tooltip label="Email">
             <ActionIcon
                 variant="default"
                 size="lg"
                 component="a"
+                href="mailto:benjaminye.email@gmail.com"
             >
-                <IconNotebook />
+                <IconMail />
             </ActionIcon>
         </Tooltip>
     );

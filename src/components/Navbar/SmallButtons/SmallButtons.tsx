@@ -2,8 +2,9 @@ import {
     Group,
 } from "@mantine/core";
 
-import Blog from "./Blog";
-import ColorSchemeSwitcher from "./ColorSchemeSwitcher";
+import Email from "./Email";
+import Github from "./Github";
+import Linkedin from "./Linkedin";
 import Resume from "./Resume";
 
 
@@ -14,9 +15,10 @@ interface props {
 export default function SmallButtons(props: props) {
     return (
         <Group ml={"auto"} visibleFrom={props.visibleFrom}>
-            <Blog />
             <Resume />
-            <ColorSchemeSwitcher />
+            <Email />
+            <Linkedin />
+            <Github />
         </Group>
     );
 }
