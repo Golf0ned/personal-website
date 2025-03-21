@@ -3,21 +3,22 @@ import {
     Tooltip,
 } from "@mantine/core";
 
-import { IconFileText } from "@tabler/icons-react";
+import { IconFileCertificate } from "@tabler/icons-react";
 
 
 export default function Resume() {
     return (
         <Tooltip label="Resume">
             <ActionIcon
-                variant="default"
+                variant="outline"
+                color="violet"
                 size="lg"
                 component="a"
                 target="_blank"
                 rel="noopener noreferrer"
                 href="/Resume_Benjamin_Ye.pdf"
             >
-                <IconFileText />
+                <IconFileCertificate />
             </ActionIcon>
         </Tooltip>
     )
