@@ -9,6 +9,8 @@ import Page from "./components/Page";
 
 import Home from "./components/Home";
 import About from "./components/About";
+import Projects from "./components/Projects";
+import Blog from "./components/Blog";
 
 import "./App.css";
 
@@ -45,6 +47,22 @@ function App() {
                                 element={
                                     <Page title="About | Benjamin Ye">
                                         <About />
+                                    </Page>
+                                }
+                            />
+                            <Route
+                                path="/projects"
+                                element={
+                                    <Page title="Projects | Benjamin Ye">
+                                        <Projects />
+                                    </Page>
+                                }
+                            />
+                            <Route
+                                path="/blog"
+                                element={
+                                    <Page title="Blog | Benjamin Ye">
+                                        <Blog />
                                     </Page>
                                 }
                             />
