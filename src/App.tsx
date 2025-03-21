@@ -28,7 +28,10 @@ const theme = createTheme({
 function App() {
     return (
         <ParallaxProvider>
-            <MantineProvider theme={theme}>
+            <MantineProvider
+                theme={theme}
+                forceColorScheme="dark"
+            >
                 <BrowserRouter>
                     <Routes>
 
