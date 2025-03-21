@@ -58,7 +58,7 @@ export default function Navbar() {
 
     return (
         <Paper mih="50" mt="xs">
-            <Container>
+            <Container fluid maw="79.25em">
                 <Group mt={4} justify="flex-end">
                     <HomeButton />
 
