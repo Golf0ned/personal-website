@@ -6,33 +6,17 @@ import {
 
 import ProjectCard from "./ProjectCard";
 
-
-const projects = [
-    {
-        name: "Project 1",
-        image: "/honktie.png",
-        description: "Project 1 description.",
-        github: "https://github.com",
-        external: "https://example.com",
-    },
-    {
-        name: "Project 2",
-        image: "/nu-miku.jpg",
-        description: "Project 2 description.",
-        github: "https://github.com",
-        external: "https://example.com",
-    },
-];
+import projects from "data/projects";
 
 
 export default function Projects() {
 
     const projectCards = projects.map((project) => (
         <Grid.Col
+            key={project.name}
             span={{ base: 12, sm: 6, lg: 4 }}
         >
             <ProjectCard
-                key={project}
                 name={project.name}
                 image={project.image}
                 description={project.description}
