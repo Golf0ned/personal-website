@@ -15,8 +15,8 @@ import { education, work } from "data/experience";
 
 export default function Experience() {
     return (
-        <Stack gap="md">
-            <Title order={1}>Experience</Title>
+        <Stack gap="lg">
+            <Title order={1} mb="xs">Experience</Title>
             <ExperienceTimeline
                 title="Education"
                 data={education}
