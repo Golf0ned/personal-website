@@ -1,4 +1,5 @@
 import {
+    Badge,
     Button,
     Card,
     Group,
@@ -9,17 +10,17 @@ import {
 
 import { IconExternalLink, IconBrandGithub } from "@tabler/icons-react";
 
-
-interface props {
-    name: string;
-    image: string;
-    description: string;
-    github?: string;
-    external?: string;
-}
+import { projectTagColors } from "data/projects";
+import type { Project, ProjectTags } from "data/projects";
 
 
-export default function ProjectCard({ name, image, description, github, external }: props) {
+export default function ProjectCard({ name, image, description, github, external, tags }: Project) {
+    const tagElements = tags?.map((tag: ProjectTags) => (
+        <Badge key={tag} color={projectTagColors[tag]}>
+            {tag}
+        </Badge>
+    ));
+
     return (
         <Card shadow="sm" withBorder>
             <Card.Section>
@@ -31,6 +32,9 @@ export default function ProjectCard({ name, image, description, github, external
                 my="sm"
             >
                 <Title order={3}>{name}</Title>
+                <Group>
+                    {tagElements}
+                </Group>
             </Group>
 
             <Text>{description}</Text>
