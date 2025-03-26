@@ -45,11 +45,12 @@ export default function Navbar() {
         <Button
             key={link.label}
             variant="default"
-            color="--mantine-color-default-color"
             fullWidth
-            onClick={(event) => {
+            color="--mantine-color-default-color"
+            component={Link}
+            to={link.href}
+            onClick={() => {
                 toggle();
-                event.preventDefault();
             }}
         >
             {link.label}
