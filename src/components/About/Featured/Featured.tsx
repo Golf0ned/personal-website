@@ -4,23 +4,25 @@ import {
 
 import FeaturedCard from "./FeaturedCard";
 
+import { projects } from "data/projects";
+import type { Project } from "data/projects";
+
 
 export default function Featured() {
+    const featuredCards = projects.map((project: Project) => (
+        project.tags && project.tags.includes("Featured") && (
+            <FeaturedCard
+                key={project.name}
+                image={project.image}
+                name={project.name}
+                description={project.description}
+            />
+        )));
+
     return (
         <>
             <Title order={1}>Featured Projects</Title>
-            <FeaturedCard
-                image="/nu-miku.jpg"
-                name="NU Esports Bot"
-                description="A Discord bot for the NU Esports Discord server."
-                github="https://github.com/Golf0ned/nu-esports-bot"
-            />
-            <FeaturedCard
-                image="/honktie.png"
-                name="reacto"
-                description="A Discord bot that turns text into message reactions."
-                github="https://github.com/Golf0ned/reacto"
-            />
+            {featuredCards}
         </>
     );
 }

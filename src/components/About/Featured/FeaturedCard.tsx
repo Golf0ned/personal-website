@@ -13,7 +13,6 @@ interface props {
     image: string;
     name: string;
     description: string;
-    github: string;
 }
 
 export default function FeaturedCard({ image, name, description }: props) {
