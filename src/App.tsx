@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import { createTheme, MantineProvider, rem } from "@mantine/core";
-import { ParallaxProvider } from "react-scroll-parallax";
 import "@mantine/core/styles.css";
 
 import Layout from "./components/Layout";
@@ -27,54 +26,52 @@ const theme = createTheme({
 
 function App() {
     return (
-        <ParallaxProvider>
-            <MantineProvider
-                theme={theme}
-                forceColorScheme="dark"
-            >
-                <BrowserRouter>
-                    <Routes>
+        <MantineProvider
+            theme={theme}
+            forceColorScheme="dark"
+        >
+            <BrowserRouter>
+                <Routes>
 
+                    <Route
+                        path="/"
+                        element={
+                            <Page title="Home | Benjamin Ye">
+                                <Home />
+                            </Page>
+                        }
+                    />
+
+                    <Route element={<Layout />}>
                         <Route
-                            path="/"
+                            path="/about"
                             element={
-                                <Page title="Home | Benjamin Ye">
-                                    <Home />
+                                <Page title="About | Benjamin Ye">
+                                    <About />
                                 </Page>
                             }
                         />
+                        <Route
+                            path="/projects"
+                            element={
+                                <Page title="Projects | Benjamin Ye">
+                                    <Projects />
+                                </Page>
+                            }
+                        />
+                        <Route
+                            path="/blog"
+                            element={
+                                <Page title="Blog | Benjamin Ye">
+                                    <Blog />
+                                </Page>
+                            }
+                        />
+                    </Route>
 
-                        <Route element={<Layout />}>
-                            <Route
-                                path="/about"
-                                element={
-                                    <Page title="About | Benjamin Ye">
-                                        <About />
-                                    </Page>
-                                }
-                            />
-                            <Route
-                                path="/projects"
-                                element={
-                                    <Page title="Projects | Benjamin Ye">
-                                        <Projects />
-                                    </Page>
-                                }
-                            />
-                            <Route
-                                path="/blog"
-                                element={
-                                    <Page title="Blog | Benjamin Ye">
-                                        <Blog />
-                                    </Page>
-                                }
-                            />
-                        </Route>
-
-                    </Routes>
-                </BrowserRouter>
-            </MantineProvider>
-        </ParallaxProvider>
+                </Routes>
+            </BrowserRouter>
+        </MantineProvider>
     );
 }
 
