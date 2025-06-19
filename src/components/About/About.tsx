@@ -6,7 +6,7 @@ import {
 import Bio from "./Bio";
 import Experience from "./Experience";
 import Featured from "./Featured";
-import Skills from "./Skills";
+// import Skills from "./Skills";
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <Container>
                 <Stack>
                     <Bio />
-                    <Skills />
+                    {/* <Skills /> */}
                     <Experience />
                     <Featured />
                 </Stack>
