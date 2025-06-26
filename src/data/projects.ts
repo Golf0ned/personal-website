@@ -1,7 +1,7 @@
 interface Project {
     name: string;
     description: string;
-    image: string;
+    image?: string;
     github?: string;
     external?: string;
     tags?: ProjectTags[];
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     {
         name: "ResumeLang",
         description: "Custom language and toolchain for porting resumes to different formats.",
-        image: "/honktie.png",
+        image: "/projects/resumelang.png",
         github: "https://github.com/Golf0ned/ResumeLang",
         tags: [
             "Hackathon",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     {
         name: "reacto",
         description: "Discord bot that turns text into message reactions.",
-        image: "/reacto.png",
+        image: "/projects/reacto.png",
         github: "https://github.com/golf0ned/reacto",
         tags: [
             "Featured",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     {
         name: "NU Esports Bot",
         description: "The official Discord bot for the Northwestern Esports Discord server.",
-        image: "/nu-miku.jpg",
+        image: "/projects/nu-miku.jpg",
         github: "https://github.com/golf0ned/nu-esports-bot",
         tags: [
             "Featured",
@@ -63,7 +63,6 @@ export const projects: Project[] = [
     {
         name: "F-STARS",
         description: "FPGA-mounted system for detecting seismic activity on Mars using machine learning and signal processing.",
-        image: "/honktie.png",
         github: "https://github.com/cjschilf/nasaspaceapps2024_stan5370",
         external: "https://www.youtube.com/watch?v=ScUdFu_6Ruw",
         tags: [
@@ -74,7 +73,6 @@ export const projects: Project[] = [
     {
         name: "Purple Hours",
         description: "Group-based queue system for office hours in Northwestern CS courses.",
-        image: "/honktie.png",
         github: "https://github.com/394-s24/PurpleHours",
         external: "https://purple-hours-v2.web.app/",
         tags: [
@@ -84,7 +82,6 @@ export const projects: Project[] = [
     {
         name: "LB-x86_64 Compiler",
         description: "Compiler from a C-like language to x86_64 assembly, implementing modern compilation techniques.",
-        image: "/honktie.png",
         tags: [
             "CLI",
         ]
@@ -92,7 +89,6 @@ export const projects: Project[] = [
     {
         name: "pairings-bot",
         description: "Discord bot to post tabroom pairings.",
-        image: "/honktie.png",
         github: "https://github.com/Golf0ned/pairings-bot",
         tags: [
             "Discord",

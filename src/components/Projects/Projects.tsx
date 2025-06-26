@@ -24,7 +24,7 @@ export default function Projects() {
             <EqualHeightElement name="project-card">
                 <ProjectCard
                     name={project.name}
-                    image={project.image}
+                    image={project.image ? project.image : "/projects/default.png"}
                     description={project.description}
                     github={project.github}
                     external={project.external}

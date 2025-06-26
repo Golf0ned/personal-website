@@ -13,7 +13,7 @@ export default function Featured() {
         project.tags && project.tags.includes("Featured") && (
             <FeaturedCard
                 key={project.name}
-                image={project.image}
+                image={project.image ? project.image : "/projects/default.png"}
                 name={project.name}
                 description={project.description}
             />
