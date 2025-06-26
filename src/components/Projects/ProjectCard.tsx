@@ -46,7 +46,7 @@ export default function ProjectCard({ name, image, description, github, external
                 {github &&
                     <Button
                         w={"45%"}
-                        variant="filled"
+                        variant="outline"
                         leftSection={<IconBrandGithub />}
                         component="a"
                         href={github}
@@ -59,7 +59,7 @@ export default function ProjectCard({ name, image, description, github, external
                 {external &&
                     <Button
                         w={"45%"}
-                        variant="filled"
+                        variant="outline"
                         leftSection={<IconExternalLink />}
                         component="a"
                         href={external}
