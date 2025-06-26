@@ -4,6 +4,7 @@ import {
     Card,
     Group,
     Image,
+    Space,
     Text,
     Title,
 } from "@mantine/core";
@@ -22,7 +23,7 @@ export default function ProjectCard({ name, image, description, github, external
     ));
 
     return (
-        <Card shadow="sm" withBorder>
+        <Card shadow="sm" withBorder h="100%">
             <Card.Section>
                 <Image src={image} height={200}/>
             </Card.Section>
@@ -39,7 +40,9 @@ export default function ProjectCard({ name, image, description, github, external
 
             <Text>{description}</Text>
 
-            <Group mt="sm" justify="space-around">
+            <Space h="sm" />
+
+            <Group mt="auto" justify="space-around">
                 {github &&
                     <Button
                         w={"45%"}
