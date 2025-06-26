@@ -39,7 +39,7 @@ const buttons = [
         {
             text: "Get in touch",
             icon: <IconMail />,
-            href: "/contact",
+            href: "mailto:benjaminye.email@gmail.com",
             newTab: false,
         },
     ],
