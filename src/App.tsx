@@ -36,7 +36,6 @@ function App() {
                     <BlogPage
                         title={post.title}
                         date={post.date}
-                        slug={post.slug}
                     />
                 </Page>
             }
