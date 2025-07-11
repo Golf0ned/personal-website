@@ -10,14 +10,14 @@ import {
     Title,
 } from "@mantine/core";
 
-import { posts } from "data/blog";
-import type { BlogPost } from "data/blog";
+import { blogData } from "./BlogData";
+import type { BlogPost } from "./BlogData";
 
 import BlogCard from "./BlogCard";
 
 
 export default function Blog() {
-    const blogCards = posts.map((post: BlogPost) => (
+    const blogCards = blogData.map((post: BlogPost) => (
         <Grid.Col
             key={post.slug}
             span={{ base: 12, sm: 6, lg: 4 }}
@@ -27,6 +27,7 @@ export default function Blog() {
                     title={post.title}
                     date={post.date}
                     slug={post.slug}
+                    content={post.content}
                 />
             </EqualHeightElement>
         </Grid.Col>

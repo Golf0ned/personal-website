@@ -8,7 +8,7 @@ import {
     Title,
 } from "@mantine/core";
 
-import type { BlogPost } from "data/blog";
+import type { BlogPost } from "./BlogData";
 
 export default function BlogCard({ title, date, slug }: BlogPost) {
     return (

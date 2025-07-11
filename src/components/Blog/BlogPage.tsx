@@ -7,26 +7,20 @@ import {
     Title,
 } from "@mantine/core";
 
-import { posts } from "data/blog";
-import type { BlogPost } from "data/blog";
-import { postsData } from "./Pages";
+import type { BlogPost } from "./BlogData";
 
 
-export default function BlogPage({ title, date }: BlogPost) {
-    // zip post titles to their respective pages in allPosts
-    const titleToPage = Object.fromEntries(
-        posts.map((post, i) => [post.title, postsData[i]])
-    );
-
+export default function BlogPage({ title, date, content }: BlogPost) {
     return (
         <Container>
             <Title order={1}>{title}</Title>
             <Text c="dimmed" size="sm" mb="md">{date}</Text>
             
-            {titleToPage[title]}
+            <>{content}</>
 
             <Button
                 variant="outline"
+                mt="md"
                 component={Link}
                 to="/blog"
             >

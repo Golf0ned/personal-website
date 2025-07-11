@@ -9,10 +9,10 @@ import Page from "./components/Page";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Blog from "./components/Blog/Landing";
-import BlogPage from "./components/Blog/Posts";
-
-import { posts } from "./data/blog";
+import Blog from "./components/Blog/Blog";
+import BlogPage from "./components/Blog/BlogPage";
+import { blogData } from "./components/Blog/BlogData";
+import type { BlogPost } from "./components/Blog/BlogData";
 
 import "./App.css";
 
@@ -28,7 +28,7 @@ const theme = createTheme({
 });
 
 function App() {
-    const blogPosts = posts.map((post: BlogPost) => (
+    const blogPosts = blogData.map((post: BlogPost) => (
         <Route
             path={`/blog/${post.slug}`}
             element={
@@ -36,6 +36,8 @@ function App() {
                     <BlogPage
                         title={post.title}
                         date={post.date}
+                        slug={post.slug}
+                        content={post.content}
                     />
                 </Page>
             }
