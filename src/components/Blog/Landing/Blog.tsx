@@ -6,7 +6,7 @@ import {
 import {
     Container,
     Grid,
-    Text,
+    Space,
     Title,
 } from "@mantine/core";
 
@@ -35,7 +35,7 @@ export default function Blog() {
     return (
         <Container>
             <Title order={1}>Blog</Title>
-            <Text>Under construction!</Text>
+            <Space h="lg"/>
             <EqualHeight>
                 <Grid>
                     {blogCards}
