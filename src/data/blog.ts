@@ -14,9 +14,9 @@ function toSlug(title: string): string {
 
 export const posts: BlogPost[] = [
     {
-        title: "Test Post",
+        title: "Fast-Tracking Coding Expertise",
         date: "7/10/2025",
-        slug: toSlug("Test Post")
+        slug: toSlug("Fast-Tracking Coding Expertise")
     }
 ];
 

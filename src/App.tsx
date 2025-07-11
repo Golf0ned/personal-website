@@ -9,7 +9,10 @@ import Page from "./components/Page";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Blog from "./components/Blog";
+import Blog from "./components/Blog/Landing";
+import BlogPage from "./components/Blog/Posts";
+
+import { posts } from "./data/blog";
 
 import "./App.css";
 
@@ -25,6 +28,21 @@ const theme = createTheme({
 });
 
 function App() {
+    const blogPosts = posts.map((post: BlogPost) => (
+        <Route
+            path={`/blog/${post.slug}`}
+            element={
+                <Page title={`${post.title} | Benjamin Ye`}>
+                    <BlogPage
+                        title={post.title}
+                        date={post.date}
+                        slug={post.slug}
+                    />
+                </Page>
+            }
+        />
+    ));
+
     return (
         <MantineProvider
             theme={theme}
@@ -67,6 +85,7 @@ function App() {
                                 </Page>
                             }
                         />
+                        {blogPosts}
                     </Route>
 
                 </Routes>
