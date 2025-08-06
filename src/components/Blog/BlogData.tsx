@@ -1,7 +1,9 @@
 import fastTrackingCodingExpertise from "data/blog/FastTrackingCodingExpertise";
+import git from "data/blog/Git";
 
 const posts = [
     fastTrackingCodingExpertise,
+    git,
 ];
 
 
